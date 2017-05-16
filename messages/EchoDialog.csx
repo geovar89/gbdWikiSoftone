@@ -49,14 +49,15 @@ public class EchoDialog : IDialog<object>
                { "words",message.Text }
             };
 
-            var content = new FormUrlEncodedContent(values);
-            var response = await client.PostAsync("http://wiki.softone.gr/main.ashx", content);
+            //var content = new FormUrlEncodedContent(values);
+			var responseString = "xx";
+            /*var response = await client.PostAsync("http://wiki.softone.gr/main.ashx", content);
             var responseString = await response.Content.ReadAsStringAsync();
             
             responseString = responseString.Replace("&","&amp");
             responseString = responseString.Replace("<","&lt");
             responseString = responseString.Replace(">","&lg");
-            //var replacedString = await ReplaceAsync(responseString);
+            //var replacedString = await ReplaceAsync(responseString);*/
             await context.PostAsync(responseString);
             context.Wait(MessageReceivedAsync);
         }

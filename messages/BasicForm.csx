@@ -4,8 +4,12 @@ using Microsoft.Bot.Builder.FormFlow;
 public enum CarOptions { Convertible = 1, SUV, EV };
 public enum ColorOptions { Red = 1, White, Blue };
 <<<<<<< HEAD
+<<<<<<< HEAD
 public enum LanguageOptions { Greek = 1, English };
 public enum OperationOptions { All = 1, At least one };
+=======
+
+>>>>>>> parent of 8802048... basic form position
 =======
 
 >>>>>>> parent of 8802048... basic form position

@@ -1,26 +1,24 @@
 ﻿using System;
 using Microsoft.Bot.Builder.FormFlow;
 
-public enum CarOptions { Convertible = 1, SUV, EV };
 public enum ColorOptions { Red = 1, White, Blue };
-<<<<<<< HEAD
 public enum LanguageOptions { Greek = 1, English };
-public enum OperationOptions { All = 1, At least one };
-=======
-
->>>>>>> parent of 8802048... basic form position
+public enum OperationOptions { Όλες = 1, Μία τουλάχιστον };
 // For more information about this template visit http://aka.ms/azurebots-csharp-form
 [Serializable]
 public class BasicForm
 {
-    [Prompt("Hi! What is your {&}?")]
+    [Prompt("Γεια σας!Ποιο είναι το username σας {&}?")]
     public string Name { get; set; }
 
-    [Prompt("Please select your favorite car type {||}")]
-    public CarOptions Car { get; set; }
+    [Prompt("Παρακαλώ επιλέξτε γλώσσα{||}")]
+    public LanguageOptions Language { get; set; }
 
-    [Prompt("Please select your favorite {&} {||}")]
-    public ColorOptions Color { get; set; }
+	[Prompt("Συμπληρώστε τις λέξεις που θέλετε να αναζητήσουμε {&}")]
+    public string Words { get; set; }
+
+	[Prompt("Θέλετε τα αποτελέσματα να περιέχουν όλες τις λέξεις ή τουλάχιστον 1{||}?")]
+    public LanguageOptions Language { get; set; }
 
     public static IForm<BasicForm> BuildForm()
     {

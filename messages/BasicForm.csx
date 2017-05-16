@@ -3,7 +3,7 @@ using Microsoft.Bot.Builder.FormFlow;
 
 public enum ColorOptions { Red = 1, White, Blue };
 public enum LanguageOptions { Greek = 1, English };
-public enum OperationOptions { Όλες = 1, Μία τουλάχιστον };
+public enum OperationOptions { All = 1, At least one };
 // For more information about this template visit http://aka.ms/azurebots-csharp-form
 [Serializable]
 public class BasicForm
